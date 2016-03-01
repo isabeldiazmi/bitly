@@ -9,7 +9,10 @@ post '/urls' do
   puts "hola"
   puts "-"*100
 
-  redirect to '/'
+  link = params[:link]
+  puts url = 'http://bit.ly/' + link.split('').sample(7).join
+
+  #redirect to '/'
 end
 
 # e.g., /q6bda

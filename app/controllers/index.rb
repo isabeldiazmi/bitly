@@ -6,13 +6,11 @@ end
 post '/urls' do
   # crea una nueva Url
   puts "-"*100
-  puts "hola"
-  puts "-"*100
-
   link = params[:link]
-  puts url = 'http://bit.ly/' + link.split('').sample(7).join
-
-  #redirect to '/'
+  puts @url = 'http://bit.ly/' + link.split('').sample(7).join
+  puts "-"*100
+  
+  redirect to '/'
 end
 
 # e.g., /q6bda

@@ -1,7 +1,13 @@
   <h1>Bienvenido a reductor de URL's!</h1>
+
   <form action="/urls" method="post">
     Pega el link:
     <br>
     <input type="text" name="link">
     <input type="submit" value="Reduce!">
   </form>
+
+  <% if @url %>
+    <p>Tu URL reducida: "<span><%= @url %></span>"</p>
+  <% end %>
+  

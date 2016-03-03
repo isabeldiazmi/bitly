@@ -1,0 +1,15 @@
+  <h1>Bienvenido a reductor de URL's!</h1>
+
+  <form action="/urls" method="post">
+    Pega el link:
+    <br>
+    <input type="text" name="link">
+    <input type="submit" value="Reduce!">
+  </form>
+
+  <% if @ans %>
+  <p>Tus URLs: </p>
+    <% @ans.each do |u| %>
+    <p><span> <%= u.id %> Original: <a href="<%=u.original_url%>"><%= u.original_url %></a> Reducida: <a href="/<%=u.short_url%>"><%= u.short_url %></a> </span></p>
+    <%end%>
+    <%end%>
